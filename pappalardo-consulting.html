@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pappalardo Consulting</title>
+  <meta name="description" content="Pappalardo Consulting provides financial reporting, dashboards, advanced bookkeeping, and business planning for small businesses." />
+  <meta property="og:title" content="Pappalardo Consulting" />
+  <meta property="og:description" content="Wall Street Strategy for Main Street." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2.25rem, 1.2rem + 3vw, 4.5rem);
+      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem;
+      --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+      --color-bg: #f5f6f8;
+      --color-surface: #ffffff;
+      --color-surface-2: #eef1f5;
+      --color-surface-offset: #e6eaf0;
+      --color-border: rgba(9, 25, 64, 0.12);
+      --color-divider: rgba(9, 25, 64, 0.08);
+      --color-text: #0b1736;
+      --color-text-muted: #47536b;
+      --color-text-faint: #7f8aa1;
+      --color-primary: #14149b;
+      --color-primary-hover: #0f1179;
+      --color-primary-highlight: #dbe0f5;
+      --color-accent: #bcc2ce;
+      --radius-sm: 0.375rem; --radius-md: 0.625rem; --radius-lg: 1rem; --radius-xl: 1.5rem; --radius-full: 9999px;
+      --shadow-sm: 0 8px 20px rgba(11, 23, 54, 0.06);
+      --shadow-md: 0 18px 48px rgba(11, 23, 54, 0.10);
+      --content: 1180px;
+      --font-body: 'Manrope', Arial, sans-serif;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+    }
+    [data-theme="dark"] {
+      --color-bg: #0d1220;
+      --color-surface: #11192c;
+      --color-surface-2: #162038;
+      --color-surface-offset: #1b2741;
+      --color-border: rgba(226, 232, 240, 0.12);
+      --color-divider: rgba(226, 232, 240, 0.08);
+      --color-text: #edf2fb;
+      --color-text-muted: #bec9da;
+      --color-text-faint: #8d9ab0;
+      --color-primary: #8b92ff;
+      --color-primary-hover: #a2a8ff;
+      --color-primary-highlight: rgba(139, 146, 255, 0.14);
+      --color-accent: #bfc6d1;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.30);
+      --shadow-md: 0 20px 48px rgba(0, 0, 0, 0.38);
+    }
+    *,:before,:after{box-sizing:border-box;margin:0;padding:0}
+    html{-webkit-text-size-adjust:none;text-size-adjust:none;scroll-behavior:smooth;scroll-padding-top:5rem}
+    body{min-height:100dvh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;color:var(--color-text);background:var(--color-bg)}
+    img,svg{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;cursor:pointer;border:0;background:none}
+    p{max-width:68ch;color:var(--color-text-muted)}
+    h1,h2{font-family:var(--font-display);line-height:1.03;letter-spacing:-0.02em;color:var(--color-text)}
+    h3{font-size:var(--text-lg);line-height:1.2;color:var(--color-text)}
+    :focus-visible{outline:2px solid var(--color-primary);outline-offset:3px;border-radius:var(--radius-sm)}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--color-text);color:#fff;padding:var(--space-3) var(--space-4);z-index:100}
+    .skip-link:focus{left:var(--space-4);top:var(--space-4)}
+    .container{width:min(calc(100% - 2rem),var(--content));margin-inline:auto}
+    .eyebrow{font-size:var(--text-xs);letter-spacing:0.18em;text-transform:uppercase;color:var(--color-text-faint);font-weight:700}
+    .site-header{position:sticky;top:0;z-index:40;background:color-mix(in srgb, var(--color-bg) 88%, transparent);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:border-color .2s ease, box-shadow .2s ease}
+    .site-header.scrolled{border-color:var(--color-divider);box-shadow:var(--shadow-sm)}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:var(--space-4) 0}
+    .brand{display:flex;align-items:center;gap:var(--space-3);font-weight:700;font-size:var(--text-sm);letter-spacing:.04em;text-transform:uppercase}
+    .brand-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(180deg,var(--color-primary),var(--color-primary-hover));display:grid;place-items:center;box-shadow:var(--shadow-sm);color:#fff;font-weight:800}
+    .nav-links{display:flex;gap:var(--space-6);align-items:center}
+    .nav-links a{font-size:var(--text-sm);color:var(--color-text-muted)}
+    .theme-toggle,.button,.button-secondary{min-height:44px;padding:0 var(--space-5);border-radius:var(--radius-full);display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2)}
+    .theme-toggle{border:1px solid var(--color-border);color:var(--color-text)}
+    .button{background:var(--color-primary);color:#fff;font-weight:700;box-shadow:var(--shadow-sm)}
+    .button:hover{background:var(--color-primary-hover)}
+    .button-secondary{border:1px solid var(--color-border);color:var(--color-text);background:var(--color-surface)}
+    .hero{padding:clamp(4rem,9vw,8rem) 0 clamp(3.5rem,8vw,7rem)}
+    .hero-grid{display:grid;grid-template-columns:1.3fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:end}
+    .hero-copy{display:grid;gap:var(--space-6)}
+    .hero h1{font-size:var(--text-2xl);max-width:12ch}
+    .hero p.lead{font-size:clamp(1.1rem,1rem + 0.4vw,1.32rem);max-width:58ch;color:var(--color-text-muted)}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:var(--space-3)}
+    .hero-panel{background:linear-gradient(180deg,var(--color-surface),var(--color-surface-2));border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:clamp(1.5rem,3vw,2.5rem);box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+    .hero-panel:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right, color-mix(in srgb, var(--color-primary) 12%, transparent), transparent 42%);pointer-events:none}
+    .logo-lockup{display:grid;gap:var(--space-5);position:relative;z-index:1}
+    .logo-box{background:var(--color-surface);border:1px solid var(--color-border);border-radius:calc(var(--radius-xl) - var(--space-2));padding:var(--space-4);display:grid;place-items:center;min-height:250px}
+    .logo-box img{max-height:240px;object-fit:contain}
+    .mini-note{display:grid;gap:var(--space-2)}
+    section{padding:clamp(3.5rem,7vw,6rem) 0;border-top:1px solid var(--color-divider)}
+    .section-head{display:grid;gap:var(--space-3);margin-bottom:var(--space-10)}
+    .section-head h2{font-size:var(--text-xl);max-width:10ch}
+    .services-grid,.value-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}
+    .card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);box-shadow:var(--shadow-sm)}
+    .card p{margin-top:var(--space-3)}
+    .approach-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--space-8);align-items:start}
+    .bullet-list{display:grid;gap:var(--space-4);list-style:none}
+    .bullet-list li{padding:var(--space-4) 0;border-bottom:1px solid var(--color-divider);color:var(--color-text)}
+    .bullet-list li span{display:block;color:var(--color-text-muted);margin-top:var(--space-1)}
+    .quote-card{background:linear-gradient(180deg, color-mix(in srgb, var(--color-primary) 6%, var(--color-surface)), var(--color-surface));border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-md)}
+    .quote-card p{font-size:var(--text-lg);font-family:var(--font-display);line-height:1.25;color:var(--color-text);max-width:20ch}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:var(--space-8);align-items:start}
+    .badge{display:inline-flex;align-items:center;padding:0.45rem 0.8rem;border-radius:var(--radius-full);background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-xs);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .contact-card{display:grid;gap:var(--space-4);background:var(--color-text);color:#fff;border-radius:var(--radius-xl);padding:clamp(1.5rem,4vw,2.5rem);box-shadow:var(--shadow-md)}
+    .contact-card p,.contact-card a{color:rgba(255,255,255,.82)}
+    .contact-card .button-secondary{background:transparent;border-color:rgba(255,255,255,.18);color:#fff}
+    .site-footer{padding:var(--space-8) 0 var(--space-10);color:var(--color-text-faint)}
+    @media (max-width: 920px){
+      .hero-grid,.approach-grid,.about-grid,.services-grid,.value-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hero h1,.section-head h2{max-width:none}
+    }
+    @media (max-width: 640px){
+      .nav-wrap{align-items:flex-start}
+      .brand span:last-child{display:none}
+      .hero-actions{flex-direction:column;align-items:stretch}
+      .button,.button-secondary,.theme-toggle{width:100%}
+      .logo-box{min-height:200px}
+    }
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Pappalardo Consulting home">
+        <div class="brand-mark">P</div>
+        <span>Pappalardo Consulting</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode">Theme</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Wall Street Strategy for Main Street</div>
+          <h1>Financial clarity for businesses that need stronger reporting.</h1>
+          <p class="lead">Pappalardo Consulting provides financial reporting, advanced bookkeeping, dashboard visibility, and planning support for owners who want better information and more disciplined decision-making.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Contact Us</a>
+            <a class="button-secondary" href="#services">Our Services</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Brand panel">
+          <div class="logo-lockup">
+            <div class="logo-box">
+              <img src="../../FullNavyLogo-2.jpg" alt="Pappalardo Consulting full logo" width="1080" height="1080" loading="eager" />
+            </div>
+            <div class="mini-note">
+              <div class="badge">Focused advisory support</div>
+              <p>Structured financial insight for businesses that need cleaner books, sharper reporting, and planning grounded in usable numbers.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Core services</div>
+          <h2>Built for better visibility and stronger decisions.</h2>
+          <p>The new site centers the firm on its strongest offerings: reporting, dashboards, elevated bookkeeping, and business planning.</p>
+        </div>
+        <div class="services-grid">
+          <article class="card">
+            <h3>Financial Reporting &amp; Analysis</h3>
+            <p>Management reporting, profitability review, forecasting support, and structured financial analysis built around the realities of your operation.</p>
+          </article>
+          <article class="card">
+            <h3>Dashboards &amp; KPI Visibility</h3>
+            <p>Clear reporting views that help owners monitor trends, identify issues sooner, and understand what is driving business performance.</p>
+          </article>
+          <article class="card">
+            <h3>Advanced Bookkeeping</h3>
+            <p>Books and statements designed to do more than stay current, with stronger classifications, cleaner structure, and more reliable internal reporting.</p>
+          </article>
+          <article class="card">
+            <h3>Business Planning</h3>
+            <p>Practical financial plans that translate goals into workable assumptions for revenue, expenses, staffing, and near-term execution.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="container approach-grid">
+        <div>
+          <div class="section-head">
+            <div class="eyebrow">Approach</div>
+            <h2>Practical finance support without unnecessary complexity.</h2>
+            <p>Pappalardo Consulting is positioned as a focused advisory partner for businesses that need stronger reporting discipline without building a full internal finance department.</p>
+          </div>
+          <ul class="bullet-list" role="list">
+            <li>Improve the quality and usability of financial information <span>Organize financial data so it becomes easier to read, compare, and act on.</span></li>
+            <li>Build clearer reporting and dashboard structures <span>Create management views that make performance more visible and less reactive.</span></li>
+            <li>Support planning with disciplined assumptions <span>Use grounded revenue, staffing, and expense expectations that can guide decisions.</span></li>
+            <li>Give leadership better visibility into performance drivers <span>Move beyond basic statements toward more decision-ready analysis.</span></li>
+          </ul>
+        </div>
+        <aside class="quote-card">
+          <div class="eyebrow">Positioning</div>
+          <p>Financial information should be organized, understandable, and useful to decision-makers.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Why Pappalardo Consulting</div>
+          <h2>A more structured standard for small-business finance support.</h2>
+          <p>The redesign removes unrelated offerings and presents the firm as a premium financial reporting and advisory practice.</p>
+        </div>
+        <div class="value-grid">
+          <article class="card"><h3>Executive-style reporting</h3><p>Reporting that moves beyond compliance and supports better oversight.</p></article>
+          <article class="card"><h3>Clearer internal visibility</h3><p>Dashboards and analysis that help owners understand what is changing and why.</p></article>
+          <article class="card"><h3>Bookkeeping with structure</h3><p>Books that support decision-making, not just year-end cleanup.</p></article>
+          <article class="card"><h3>Planning grounded in numbers</h3><p>Financial planning tied to real operating assumptions and measurable priorities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <div class="section-head">
+            <div class="eyebrow">About</div>
+            <h2>Focused on financial visibility, reporting discipline, and informed decision support.</h2>
+          </div>
+        </div>
+        <div class="card">
+          <p>Pappalardo Consulting helps businesses strengthen financial visibility through reporting, bookkeeping, dashboards, and planning support. The site direction is intentionally more corporate and premium, using a narrower service focus and a cleaner presentation to reinforce trust and credibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="eyebrow" style="color:rgba(255,255,255,.62)">Contact</div>
+          <h2 style="font-size:var(--text-xl);color:#fff;max-width:12ch;">Start the conversation with a clearer financial picture.</h2>
+          <p>Use this review version as the basis for the live homepage and final contact workflow.</p>
+          <p><a href="mailto:info@pappalardoconsulting.com">info@pappalardoconsulting.com</a></p>
+          <div>
+            <a class="button-secondary" href="mailto:info@pappalardoconsulting.com">Email Pappalardo Consulting</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Pappalardo Consulting — review homepage draft.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const toggle = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      if (toggle) {
+        const setLabel = () => {
+          toggle.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+          toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+        };
+        setLabel();
+        toggle.addEventListener('click', function () {
+          theme = theme === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', theme);
+          setLabel();
+        });
+      }
+      const header = document.querySelector('.site-header');
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>

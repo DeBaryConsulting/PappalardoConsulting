@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pappalardo Consulting | Partner Program</title>
+  <meta name="description" content="Pappalardo Consulting provides FP&A, fractional CFO, and analytics services for bookkeepers and CPA firms that want to extend their client offering without adding headcount." />
+  <meta property="og:title" content="Pappalardo Consulting | Partner Program" />
+  <meta property="og:description" content="Wall Street strategy for Main Street. Refer or white-label FP&A, fractional CFO, and analytics services for your clients." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0f1f3d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f5f6f8;
+      --surface: #ffffff;
+      --surface-2: #eef1f5;
+      --surface-offset: #e6eaf0;
+      --border: rgba(9, 25, 64, 0.12);
+      --divider: rgba(9, 25, 64, 0.08);
+      --text: #0b1736;
+      --text-muted: #47536b;
+      --text-faint: #7f8aa1;
+      --primary: #14149b;
+      --primary-hover: #0f1179;
+      --primary-highlight: #dbe0f5;
+      --accent: #bcc2ce;
+      --radius-sm: 0.375rem;
+      --radius-md: 0.625rem;
+      --radius-lg: 1rem;
+      --radius-xl: 1.5rem;
+      --radius-full: 9999px;
+      --shadow-sm: 0 8px 20px rgba(11, 23, 54, 0.06);
+      --shadow-md: 0 18px 48px rgba(11, 23, 54, 0.10);
+      --content: 1180px;
+      --font-body: 'Manrope', Arial, sans-serif;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+    }
+    [data-theme="dark"] {
+      --bg: #0d1220;
+      --surface: #11192c;
+      --surface-2: #162038;
+      --surface-offset: #1b2741;
+      --border: rgba(226, 232, 240, 0.12);
+      --divider: rgba(226, 232, 240, 0.08);
+      --text: #edf2fb;
+      --text-muted: #bec9da;
+      --text-faint: #8d9ab0;
+      --primary: #8b92ff;
+      --primary-hover: #a2a8ff;
+      --primary-highlight: rgba(139, 146, 255, 0.14);
+      --accent: #bfc6d1;
+      --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.30);
+      --shadow-md: 0 20px 48px rgba(0, 0, 0, 0.38);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+    }
+    img, svg { display:block; max-width:100%; height:auto; }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea, select { font: inherit; }
+    p { max-width: 68ch; color: var(--text-muted); }
+    h1, h2 {
+      font-family: var(--font-display);
+      line-height: 1.03;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    h3 { font-size: 1.125rem; line-height: 1.2; color: var(--text); }
+    .skip-link {
+      position: absolute; left: -999px; top: 0; background: var(--text); color: #fff;
+      padding: 0.75rem 1rem; z-index: 100;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+    .container { width: min(calc(100% - 2rem), var(--content)); margin-inline: auto; }
+    .eyebrow {
+      font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--text-faint); font-weight: 700;
+    }
+    .site-header {
+      position: sticky; top: 0; z-index: 40;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .site-header.scrolled { border-color: var(--divider); box-shadow: var(--shadow-sm); }
+    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding: 1rem 0; }
+    .brand { display:flex; align-items:center; gap:0.75rem; font-weight:700; font-size:0.875rem; letter-spacing:0.04em; text-transform:uppercase; }
+    .brand-mark { width:44px; height:44px; display:grid; place-items:center; }
+    .nav-links { display:flex; gap:1.5rem; align-items:center; }
+    .nav-links a { font-size:0.875rem; color: var(--text-muted); }
+    .theme-toggle, .button, .button-secondary, .button-link {
+      min-height:44px; padding: 0 1.25rem; border-radius: var(--radius-full); display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;
+    }
+    .theme-toggle { border:1px solid var(--border); color: var(--text); }
+    .button { background: var(--primary); color:#fff; font-weight:700; box-shadow: var(--shadow-sm); }
+    .button:hover { background: var(--primary-hover); }
+    .button-secondary { border:1px solid var(--border); color: var(--text); background: var(--surface); }
+    .button-link { padding: 0; min-height: auto; color: var(--primary); font-weight: 700; }
+    .hero { padding: clamp(4rem, 9vw, 8rem) 0 clamp(3.5rem, 8vw, 7rem); }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .95fr; gap: clamp(2rem, 5vw, 5rem); align-items:center; }
+    .hero-copy { display:grid; gap:1.5rem; }
+    .hero h1 { font-size: clamp(3.2rem, 6vw, 5.7rem); max-width: 11ch; }
+    .hero p.lead { font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem); max-width: 58ch; color: var(--text-muted); }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:0.75rem; }
+    .hero-panel {
+      background: linear-gradient(180deg, var(--surface), var(--surface-2));
+      border:1px solid var(--border); border-radius: var(--radius-xl); padding: clamp(1.5rem, 3vw, 2.5rem);
+      box-shadow: var(--shadow-md); position:relative; overflow:hidden;
+    }
+    .hero-panel::before {
+      content:""; position:absolute; inset:0;
+      background: radial-gradient(circle at top right, color-mix(in srgb, var(--primary) 12%, transparent), transparent 42%);
+      pointer-events:none;
+    }
+    .logo-lockup { display:grid; gap:1rem; position:relative; z-index:1; }
+    .logo-box {
+      background:#fff; border:1px solid var(--border); border-radius: calc(var(--radius-xl) - 0.5rem);
+      padding: 2rem 1.5rem; display:flex; align-items:center; justify-content:center;
+    }
+    .logo-box img { max-height: 220px; object-fit: contain; }
+    .mini-note { display:grid; gap:0.4rem; }
+    .mini-note strong { color: var(--text); }
+    section { padding: clamp(3.5rem, 7vw, 6rem) 0; border-top:1px solid var(--divider); }
+    .section-head { display:grid; gap:0.75rem; margin-bottom: 2.5rem; }
+    .section-head h2 { font-size: clamp(2rem, 2.8vw, 3.4rem); max-width: 14ch; }
+    .grid-2, .services-grid, .value-grid, .contact-two-col { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:1.25rem; }
+    .card {
+      background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 1.5rem; box-shadow: var(--shadow-sm);
+    }
+    .card p { margin-top: 0.75rem; }
+    .pill {
+      display:inline-flex; align-items:center; padding: 0.4rem 0.75rem; border-radius: var(--radius-full);
+      background: var(--primary-highlight); color: var(--primary); font-size:0.75rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
+    }
+    .steps { display:grid; gap: 1rem; }
+    .step { display:flex; gap:1rem; align-items:flex-start; padding: 1rem 0; border-bottom:1px solid var(--divider); }
+    .step-num {
+      flex:0 0 auto; width:2rem; height:2rem; border-radius:50%; display:grid; place-items:center;
+      background: var(--primary); color:#fff; font-weight:800;
+    }
+    .step:last-child { border-bottom: none; }
+    .bullet-list { list-style:none; display:grid; gap:0.9rem; }
+    .bullet-list li { padding: 0.95rem 0; border-bottom:1px solid var(--divider); }
+    .bullet-list li strong { display:block; color: var(--text); margin-bottom: 0.2rem; }
+    .contact-card {
+      display:grid; gap:1rem; background: var(--text); color:#fff; border-radius: var(--radius-xl);
+      padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: var(--shadow-md);
+    }
+    .contact-card p, .contact-card a { color: rgba(255,255,255,.82); }
+    .contact-card .button-secondary { background: transparent; border-color: rgba(255,255,255,.18); color:#fff; }
+    .contact-two-col { align-items:stretch; }
+    .contact-info-card {
+      background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-xl);
+      padding: clamp(1.5rem, 3vw, 2.5rem); box-shadow: var(--shadow-sm); display:grid; gap:1rem;
+    }
+    .contact-info-block { display:grid; gap:0.35rem; padding-bottom: 1rem; border-bottom:1px solid var(--divider); }
+    .contact-info-label {
+      font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-faint); font-weight:700;
+    }
+    .contact-info-value { font-size:1rem; font-weight:600; color: var(--text); text-decoration:none; }
+    .contact-info-value:hover { color: var(--primary); }
+    .contact-cta-row { display:flex; flex-wrap:wrap; gap:0.75rem; padding-top: 0.25rem; }
+    .contact-tagline-card {
+      background: var(--surface-2); border:1px solid var(--border); border-radius: var(--radius-xl);
+      padding: clamp(1.5rem, 3vw, 2.5rem); display:grid; align-content:center; box-shadow: var(--shadow-sm);
+    }
+    .footer { padding: 1.5rem 0 3rem; color: var(--text-faint); }
+    .footer-inner { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; border-top:1px solid var(--divider); padding-top:1.25rem; }
+    .form-grid { display:grid; gap:1rem; }
+    .field-row { display:grid; gap:1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    label { display:grid; gap:0.45rem; color: var(--text); font-weight:600; }
+    input, select, textarea {
+      width:100%; border:1px solid var(--border); background: var(--surface); color: var(--text);
+      border-radius: var(--radius-md); padding: 0.9rem 1rem; outline:none;
+    }
+    textarea { min-height: 140px; resize: vertical; }
+    input:focus, select:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px color-mix(in srgb, var(--primary) 14%, transparent); }
+    @media (max-width: 920px) {
+      .hero-grid, .grid-2, .services-grid, .value-grid, .contact-two-col, .field-row { grid-template-columns: 1fr; }
+      .nav-links { display:none; }
+      .hero h1, .section-head h2 { max-width: none; }
+    }
+    @media (max-width: 640px) {
+      .nav-wrap { align-items:flex-start; }
+      .brand span:last-child { display:none; }
+      .hero-actions { flex-direction:column; align-items:stretch; }
+      .button, .button-secondary, .button-link, .theme-toggle { width:100%; }
+      .logo-box { min-height: 200px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Pappalardo Consulting home">
+        <span class="brand-mark">
+          <img src="pcon_logo_transparent.jpg" alt="Pappalardo Consulting logo" />
+        </span>
+        <span>Pappalardo Consulting</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#partners">Partners</a>
+        <a href="#services">Services</a>
+        <a href="#process">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">☾/☀</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Partner program for accounting firms</span>
+          <h1>Grow your clients’ outcomes without adding headcount.</h1>
+          <p class="lead">Pappalardo Consulting helps bookkeepers and CPA firms extend their services with FP&A, fractional CFO, and analytics support for business clients that need more than compliance and monthly bookkeeping.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Become a Partner</a>
+            <a class="button-secondary" href="#services">See Services</a>
+          </div>
+          <p><strong>Two ways to work together:</strong> direct referral or white-label delivery, depending on how you want to serve the client.</p>
+        </div>
+        <div class="hero-panel">
+          <div class="logo-lockup">
+            <div class="logo-box">
+              <img src="pcon_logo_transparent.jpg" alt="Pappalardo Consulting logo" />
+            </div>
+            <div class="mini-note">
+              <span class="pill">Finance | Insight | Growth</span>
+              <strong>Wall Street strategy for Main Street.</strong>
+              <p>Senior-level financial planning and analytics for small businesses, startups, and owner-led firms.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Partner options</span>
+          <h2>Choose the model that fits your firm.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <span class="pill">Direct referral</span>
+            <h3 style="margin-top:0.9rem;">You introduce, we contract, you get rewarded.</h3>
+            <p>Best for firms that want to keep the relationship simple. You send the lead, we manage the engagement, and you earn a revenue-based referral fee when the client signs and pays.</p>
+          </article>
+          <article class="card">
+            <span class="pill">White-label</span>
+            <h3 style="margin-top:0.9rem;">We operate behind your brand.</h3>
+            <p>Best for firms that want to offer premium finance support without building the capability in-house. You own the client relationship, and we deliver under your name as a subcontractor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Services</span>
+          <h2>What we deliver for your clients.</h2>
+        </div>
+        <div class="services-grid">
+          <article class="card"><h3>FP&A</h3><p>Budgets, rolling forecasts, scenario planning, cash flow visibility, and monthly performance reporting.</p></article>
+          <article class="card"><h3>Fractional CFO</h3><p>Strategic guidance, KPI management, board/investor reporting, pricing and margin analysis, and decision support.</p></article>
+          <article class="card"><h3>Analytics</h3><p>Dashboards, data cleanup, business intelligence, trend analysis, and operational metrics that help owners see what matters.</p></article>
+          <article class="card"><h3>Special projects</h3><p>Fundraising models, 13-week cash flow, lender packages, M&A support, and one-off financial analysis.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>Keep it simple for your team and your clients.</h2>
+        </div>
+        <div class="grid-2">
+          <div class="card steps">
+            <div class="step"><div class="step-num">1</div><div><h3>Submit the intro</h3><p>Send us the client lead or choose the white-label path if you want us to operate under your brand.</p></div></div>
+            <div class="step"><div class="step-num">2</div><div><h3>Fit call and scope</h3><p>We confirm goals, timeline, pricing model, and whether the work is direct referral or subcontracted delivery.</p></div></div>
+            <div class="step"><div class="step-num">3</div><div><h3>Agreement and kickoff</h3><p>We finalize the paperwork, collect what we need from the client, and start the engagement.</p></div></div>
+            <div class="step"><div class="step-num">4</div><div><h3>Deliver and report</h3><p>We provide clean, client-ready work products and keep communication tight so the engagement stays smooth.</p></div></div>
+          </div>
+          <div class="card">
+            <span class="pill">Why partners choose us</span>
+            <ul class="bullet-list" style="margin-top:1rem;">
+              <li><strong>CPA/MBA-led.</strong><span>Built by someone who understands both client service and higher-level financial analysis.</span></li>
+              <li><strong>SMB-focused.</strong><span>Designed for owners who need clarity, not corporate complexity.</span></li>
+              <li><strong>Brand-safe.</strong><span>Confidential, professional, and structured to protect your relationship with the client.</span></li>
+              <li><strong>Fast start.</strong><span>Most projects can move from intro to kickoff quickly once scope is clear.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-two-col">
+        <div class="contact-info-card">
+          <span class="eyebrow">Contact</span>
+          <h2 style="font-size:clamp(2rem,2.8vw,3.2rem);">Let’s build your partner channel.</h2>
+          <div class="contact-info-block">
+            <span class="contact-info-label">Phone</span>
+            <a class="contact-info-value" href="tel:+13868453800">386-845-3800</a>
+          </div>
+          <div class="contact-info-block">
+            <span class="contact-info-label">Email</span>
+            <a class="contact-info-value" href="mailto:info@pappalardoconsulting.com">info@pappalardoconsulting.com</a>
+          </div>
+          <div class="contact-info-block">
+            <span class="contact-info-label">Location</span>
+            <span class="contact-info-value">DeBary, FL</span>
+          </div>
+          <div class="contact-cta-row">
+            <a class="button" href="mailto:info@pappalardoconsulting.com?subject=Partner%20Program%20Inquiry">Email Us</a>
+            <a class="button-secondary" href="#top">Back to top</a>
+          </div>
+        </div>
+        <div class="contact-tagline-card">
+          <span class="pill">Local</span>
+          <h3 style="margin-top:0.9rem; font-size:1.5rem;">Confidential. No client poaching. Built for trusted referral relationships.</h3>
+          <p style="margin-top:0.8rem;">This page is designed to capture interest from bookkeeping and CPA firms that want a reliable outside partner for finance and analytics work.</p>
+          <div style="margin-top:1.5rem; display:grid; gap:1rem;">
+            <a class="button" href="#contact">Request partner info</a>
+            <a class="button-secondary" href="#partners">Review partnership options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Pappalardo Consulting</span>
+      <span>Finance | Insight | Growth</span>
+    </div>
+  </footer>
+
+  <script>
+    const html = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const header = document.querySelector('.site-header');
+    const saved = localStorage.getItem('theme');
+    if (saved) html.setAttribute('data-theme', saved);
+    toggle.addEventListener('click', () => {
+      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  </script>
+</body>
+</html>
